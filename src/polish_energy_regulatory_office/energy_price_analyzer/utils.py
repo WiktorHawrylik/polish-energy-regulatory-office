@@ -33,19 +33,16 @@ def convert_units(value: float, from_unit: str, to_unit: str) -> float:
     return value
 
 
-def filter_by_date_range(
-    data: pd.DataFrame, start_date: str, end_date: str, date_column: str = "date"
-) -> pd.DataFrame:
+def filter_by_date_range(data: pd.DataFrame, start_date: str, end_date: str, date_column: str = "date") -> pd.DataFrame:
     """Filter dataframe by date range."""
     mask = (pd.to_datetime(data[date_column]) >= pd.to_datetime(start_date)) & (
         pd.to_datetime(data[date_column]) <= pd.to_datetime(end_date)
     )
-    return data[mask]
+    data_filtered: pd.DataFrame = data[mask]
+    return data_filtered
 
 
-def group_by_period(
-    data: pd.DataFrame, period: str, date_column: str = "date"
-) -> pd.DataFrame:
+def group_by_period(data: pd.DataFrame, period: str, date_column: str = "date") -> pd.DataFrame:
     """Group data by time period."""
     data_copy = data.copy()
     data_copy[date_column] = pd.to_datetime(data_copy[date_column])
