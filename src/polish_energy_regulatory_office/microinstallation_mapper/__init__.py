@@ -12,7 +12,7 @@ from .models import GridConnection, Microinstallation, ProsumerData
 from .scrapers import MicroinstallationScraper
 from .utils import analyze_grid_impact, calculate_prosumer_growth
 
-__version__ = "0.1.0"
+__version__ = "0.0.1"
 
 __all__ = [
     "MicroinstallationMapper",

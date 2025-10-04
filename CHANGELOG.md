@@ -8,6 +8,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
+- TBD
+
+### Changed
+
+- TBD
+
+### Deprecated
+
+- TBD
+
+### Removed
+
+- TBD
+
+### Fixed
+
+- TBD
+
+### Security
+
+- TBD
+
+## [0.0.1] - 2025-10-04
+
+### Added
+
 - Initial project structure with 6 specialized modules
 - Energy Price Analyzer module for price trend analysis
 - Renewable Energy Sources Mapper for installation mapping
@@ -21,26 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Pre-commit hooks for code quality
 - Sphinx documentation setup
 - Development tools (black, isort, flake8, mypy)
-
-### Changed
-- N/A
-
-### Deprecated
-- N/A
-
-### Removed
-- N/A
-
-### Fixed
-- N/A
-
-### Security
-- N/A
-
-## [0.1.0] - 2024-10-01
-
-### Added
-- Initial release with basic structure
-- Core module implementations
-- Testing infrastructure
-- Documentation framework
+- Comprehensive documentation structure with Sphinx
+- GitHub Actions workflows for CI/CD
+- Git Flow workflow with branch protection
+- Type stubs for external dependencies (pandas, requests, beautifulsoup4)

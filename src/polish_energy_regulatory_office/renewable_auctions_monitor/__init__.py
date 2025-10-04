@@ -12,7 +12,7 @@ from .monitor import RenewableAuctionsMonitor
 from .scrapers import AuctionDataScraper
 from .utils import analyze_auction_trends, calculate_clearing_prices
 
-__version__ = "0.1.0"
+__version__ = "0.0.1"
 
 __all__ = [
     "RenewableAuctionsMonitor",
