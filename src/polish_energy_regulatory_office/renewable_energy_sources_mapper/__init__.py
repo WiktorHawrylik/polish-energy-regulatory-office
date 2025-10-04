@@ -12,7 +12,7 @@ from .models import InstallationType, RegionalData, RenewableInstallation
 from .scrapers import RESRegistryScraper
 from .utils import calculate_capacity_growth, generate_geospatial_data
 
-__version__ = "0.1.0"
+__version__ = "0.0.1"
 
 __all__ = [
     "RenewableEnergyMapper",

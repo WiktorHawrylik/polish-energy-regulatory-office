@@ -140,7 +140,7 @@ Fixed
 - Data parsing edge cases
 - Network timeout handling
 
-[0.1.0] - 2024-XX-XX (Alpha)
+[0.0.1] - 2025-XX-XX (Alpha)
 -----------------------------
 
 Added

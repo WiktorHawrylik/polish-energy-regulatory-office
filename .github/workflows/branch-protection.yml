@@ -1,0 +1,34 @@
+name: Branch Protection
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  enforce-branch-protection:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.actor != 'dependabot[bot]'
+
+    steps:
+      - name: Check if push is from PR
+        run: |
+          # This job will fail if someone tries to push directly to main
+          # unless it's from a merged PR or dependabot
+          if [[ "${{ github.event.head_commit.message }}" != *"Merge pull request"* ]] && [[ "${{ github.actor }}" != "dependabot[bot]" ]]; then
+            echo "❌ Direct pushes to main branch are not allowed!"
+            echo "Please create a pull request instead."
+            echo "Commit message: ${{ github.event.head_commit.message }}"
+            echo "Actor: ${{ github.actor }}"
+            exit 1
+          fi
+          echo "✅ Push is from a merged PR or dependabot, allowing..."
+
+  # This job always runs to ensure branch protection status
+  protection-status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Branch Protection Status
+        run: |
+          echo "🔒 Branch protection is active for main branch"
+          echo "All changes must go through pull requests"

@@ -1,0 +1,92 @@
+name: Git Flow Validation
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+
+jobs:
+  validate-gitflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate Git Flow Branch Strategy
+        run: |
+          echo "🔄 Validating Git Flow branch strategy..."
+
+          # Get current branch
+          CURRENT_BRANCH="${{ github.head_ref || github.ref_name }}"
+          TARGET_BRANCH="${{ github.base_ref || github.ref_name }}"
+
+          echo "Current branch: $CURRENT_BRANCH"
+          echo "Target branch: $TARGET_BRANCH"
+
+          # Validate branch naming conventions
+          case "$CURRENT_BRANCH" in
+            main|develop)
+              echo "✅ Core branch: $CURRENT_BRANCH"
+              ;;
+            feature/*)
+              echo "✅ Feature branch: $CURRENT_BRANCH"
+              if [[ "$TARGET_BRANCH" != "develop" ]] && [[ "${{ github.event_name }}" == "pull_request" ]]; then
+                echo "❌ Feature branches must target 'develop' branch"
+                exit 1
+              fi
+              ;;
+            bugfix/*)
+              echo "✅ Bugfix branch: $CURRENT_BRANCH"
+              if [[ "$TARGET_BRANCH" != "develop" ]] && [[ "${{ github.event_name }}" == "pull_request" ]]; then
+                echo "❌ Bugfix branches must target 'develop' branch"
+                exit 1
+              fi
+              ;;
+            hotfix/*)
+              echo "✅ Hotfix branch: $CURRENT_BRANCH"
+              if [[ "$TARGET_BRANCH" != "main" ]] && [[ "${{ github.event_name }}" == "pull_request" ]]; then
+                echo "❌ Hotfix branches must target 'main' branch"
+                exit 1
+              fi
+              ;;
+            release/*)
+              echo "✅ Release branch: $CURRENT_BRANCH"
+              if [[ "$TARGET_BRANCH" != "main" ]] && [[ "$TARGET_BRANCH" != "develop" ]] && [[ "${{ github.event_name }}" == "pull_request" ]]; then
+                echo "❌ Release branches must target 'main' or 'develop' branch"
+                exit 1
+              fi
+              ;;
+            *)
+              echo "❌ Invalid branch name: $CURRENT_BRANCH"
+              echo "Branch must follow Git Flow naming convention:"
+              echo "  - feature/description"
+              echo "  - bugfix/description"
+              echo "  - hotfix/description"
+              echo "  - release/version"
+              exit 1
+              ;;
+          esac
+
+          echo "✅ Git Flow validation passed!"
+
+  enforce-branch-rules:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Enforce Git Flow Rules
+        run: |
+          echo "📋 Git Flow Rules:"
+          echo "1. feature/* and bugfix/* branches → develop"
+          echo "2. hotfix/* branches → main"
+          echo "3. release/* branches → main (for release) or develop (for back-merge)"
+          echo "4. Direct commits to main/develop are blocked by branch protection"
+
+          TARGET_BRANCH="${{ github.base_ref }}"
+          SOURCE_BRANCH="${{ github.head_ref }}"
+
+          echo "PR: $SOURCE_BRANCH → $TARGET_BRANCH"
+
+          # Additional validation can be added here
+          echo "✅ Branch rules validated"

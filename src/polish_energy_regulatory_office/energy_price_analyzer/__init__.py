@@ -11,7 +11,7 @@ from .models import PriceAnalysis, PriceData, TariffStructure
 from .scrapers import UREPriceScraper
 from .utils import format_currency
 
-__version__ = "0.1.0"
+__version__ = "0.0.1"
 
 __all__ = [
     "EnergyPriceAnalyzer",
