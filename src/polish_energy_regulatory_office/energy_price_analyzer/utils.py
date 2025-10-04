@@ -58,8 +58,3 @@ def group_by_period(
         return data_copy.groupby(data_copy[date_column].dt.to_period("Y")).sum()
     else:
         return data_copy
-
-
-def calculate_price_trends(data: pd.DataFrame) -> pd.DataFrame:
-    """Calculate price trends from historical data."""
-    return data.rolling(window=7).mean()

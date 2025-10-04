@@ -9,7 +9,7 @@ price forecasts based on historical data.
 from .analyzer import EnergyPriceAnalyzer
 from .models import PriceAnalysis, PriceData, TariffStructure
 from .scrapers import UREPriceScraper
-from .utils import calculate_price_trends, format_currency
+from .utils import format_currency
 
 __version__ = "0.1.0"
 
@@ -19,6 +19,5 @@ __all__ = [
     "TariffStructure",
     "PriceAnalysis",
     "UREPriceScraper",
-    "calculate_price_trends",
     "format_currency",
 ]

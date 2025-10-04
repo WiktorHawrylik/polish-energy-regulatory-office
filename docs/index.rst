@@ -1,5 +1,5 @@
 Polish Energy Regulatory Office Library
-======================================
+=======================================
 
 A comprehensive Python library for creating insights from publicly available data
 on the Polish Energy Regulatory Office (Urząd Regulacji Energetyki) websites.
@@ -29,7 +29,7 @@ This library provides tools for:
 * **Auction Monitoring** - Track renewable energy auction results and trends
 
 Key Features
------------
+------------
 
 * **Comprehensive Data Access**: Scrape and process data from URE websites
 * **Advanced Analytics**: Built-in analysis tools for energy market insights
@@ -39,7 +39,7 @@ Key Features
 * **Well Tested**: Comprehensive test suite with high coverage
 
 Quick Start
-----------
+-----------
 
 .. code-block:: python
 

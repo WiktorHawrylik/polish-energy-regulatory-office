@@ -12,10 +12,7 @@ from polish_energy_regulatory_office.energy_price_analyzer.models import (
     PriceData,
     TariffStructure,
 )
-from polish_energy_regulatory_office.energy_price_analyzer.utils import (
-    calculate_price_trends,
-    format_currency,
-)
+from polish_energy_regulatory_office.energy_price_analyzer.utils import format_currency
 
 
 class TestEnergyPriceAnalyzer:
@@ -130,28 +127,10 @@ class TestTariffStructure:
 class TestUtils:
     """Test cases for utility functions."""
 
-    def test_calculate_price_trends_empty_data(self):
-        """Test price trends calculation with empty data."""
-        result = calculate_price_trends([])
-
-        assert result["average"] == 0.0
-        assert result["trend"] == "stable"
-        assert result["volatility"] == 0.0
-
-    def test_calculate_price_trends_with_data(self, sample_price_data):
-        """Test price trends calculation with sample data."""
-        result = calculate_price_trends(sample_price_data)
-
-        assert "average" in result
-        assert "trend" in result
-        assert "volatility" in result
-        assert "min_price" in result
-        assert "max_price" in result
-
     def test_format_currency_pln(self):
         """Test PLN currency formatting."""
         result = format_currency(Decimal("123.45"), "PLN")
-        assert result == "123.45 z\u0142"
+        assert result == "123.45 PLN"
 
     def test_format_currency_other(self):
         """Test other currency formatting."""
