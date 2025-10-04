@@ -288,15 +288,7 @@ cd polish-energy-regulatory-office
 
 ### Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Add tests for your changes
-5. Ensure tests pass (`make test`)
-6. Ensure code quality (`make lint`)
-7. Commit your changes (`git commit -m 'Add amazing feature'`)
-8. Push to the branch (`git push origin feature/amazing-feature`)
-9. Open a Pull Request
+This project follows the **Git Flow** branching strategy for organized development and releases. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on the development workflow, branch naming conventions, and submission process.
 
 ## 📄 License
 
@@ -306,7 +298,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Issues**: [GitHub Issues](https://github.com/WiktorHawrylik/polish-energy-regulatory-office/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/WiktorHawrylik/polish-energy-regulatory-office/discussions)
-- **Email**: wiktor.hawrylik@gmail.com
+- **Email**: <wiktor.hawrylik@gmail.com>
 
 ## 📈 Roadmap
 
@@ -325,4 +317,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ for the Polish energy market analysis community**
+Made with ❤️ for the Polish energy market analysis community
