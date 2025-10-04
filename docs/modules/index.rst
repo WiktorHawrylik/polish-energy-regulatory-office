@@ -4,16 +4,6 @@ Modules Overview
 The Polish Energy Regulatory Office library consists of several specialized modules,
 each designed to handle specific aspects of energy data analysis and processing.
 
-.. toctree::
-   :maxdepth: 2
-
-   energy_price_analyzer
-   renewable_energy_sources_mapper
-   microinstallation_mapper
-   energy_efficiency_audit_tool
-   tariff_oracle
-   renewable_auctions_monitor
-
 Core Modules
 ------------
 

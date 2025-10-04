@@ -4,14 +4,8 @@ Examples
 This section provides comprehensive examples of using the Polish Energy Regulatory Office library
 for various real-world scenarios.
 
-.. toctree::
-   :maxdepth: 2
-
-   basic_usage
-   advanced_analysis
-   data_visualization
-   automated_reporting
-   integration_examples
+.. note::
+   This section contains comprehensive examples. Individual example files will be added as the project develops.
 
 Basic Usage Examples
 --------------------

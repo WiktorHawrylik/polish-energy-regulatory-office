@@ -3,18 +3,6 @@ API Reference
 
 Complete API reference for all modules in the Polish Energy Regulatory Office library.
 
-.. toctree::
-   :maxdepth: 3
-
-   energy_price_analyzer
-   renewable_energy_sources_mapper
-   microinstallation_mapper
-   energy_efficiency_audit_tool
-   tariff_oracle
-   renewable_auctions_monitor
-   exceptions
-   utils
-
 Overview
 --------
 
