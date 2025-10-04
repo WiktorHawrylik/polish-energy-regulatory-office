@@ -26,24 +26,14 @@ class RenewableEnergyMapper:
         installations = self.scraper.fetch_installations(voivodeship=voivodeship)
 
         if installation_type:
-            installations = [
-                inst
-                for inst in installations
-                if inst.installation_type == installation_type
-            ]
+            installations = [inst for inst in installations if inst.installation_type == installation_type]
 
         return installations
 
-    def get_installations_by_municipality(
-        self, municipality: str, voivodeship: str
-    ) -> List[RenewableInstallation]:
+    def get_installations_by_municipality(self, municipality: str, voivodeship: str) -> List[RenewableInstallation]:
         """Get installations for a specific municipality."""
         installations = self.get_installations_by_region(voivodeship=voivodeship)
-        return [
-            inst
-            for inst in installations
-            if inst.municipality.lower() == municipality.lower()
-        ]
+        return [inst for inst in installations if inst.municipality.lower() == municipality.lower()]
 
     def analyze_capacity_trends(self) -> Dict[str, float]:
         """Analyze capacity growth trends across all installations."""
@@ -67,9 +57,7 @@ class RenewableEnergyMapper:
 
             type_distribution = {}
             for inst_type in InstallationType:
-                type_count = len(
-                    [inst for inst in inst_list if inst.installation_type == inst_type]
-                )
+                type_count = len([inst for inst in inst_list if inst.installation_type == inst_type])
                 type_distribution[inst_type.value] = type_count
 
             regional_stats[voivodeship] = RegionalData(
@@ -81,19 +69,13 @@ class RenewableEnergyMapper:
 
         return regional_stats
 
-    def create_geospatial_map(
-        self, installation_type: Optional[InstallationType] = None
-    ) -> Dict[str, Any]:
+    def create_geospatial_map(self, installation_type: Optional[InstallationType] = None) -> Dict[str, Any]:
         """Create geospatial data for mapping installations."""
-        installations = self.get_installations_by_region(
-            installation_type=installation_type
-        )
+        installations = self.get_installations_by_region(installation_type=installation_type)
         geospatial_data = generate_geospatial_data(installations)
         return {"geospatial_points": geospatial_data}
 
-    def get_top_municipalities(
-        self, limit: int = 10, sort_by: str = "capacity"
-    ) -> List[Dict[str, Any]]:
+    def get_top_municipalities(self, limit: int = 10, sort_by: str = "capacity") -> List[Dict[str, Any]]:
         """Get top municipalities by capacity or installation count."""
         installations = self.scraper.fetch_installations()
 
@@ -132,9 +114,7 @@ class RenewableEnergyMapper:
 
         by_type = {}
         for inst_type in InstallationType:
-            type_installations = [
-                inst for inst in installations if inst.installation_type == inst_type
-            ]
+            type_installations = [inst for inst in installations if inst.installation_type == inst_type]
             by_type[inst_type.value] = {
                 "count": len(type_installations),
                 "capacity_kw": sum(inst.capacity_kw for inst in type_installations),
@@ -143,9 +123,7 @@ class RenewableEnergyMapper:
         return {
             "total_installations": total_count,
             "total_capacity_kw": total_capacity,
-            "average_capacity_per_installation": (
-                total_capacity / total_count if total_count > 0 else 0
-            ),
+            "average_capacity_per_installation": (total_capacity / total_count if total_count > 0 else 0),
             "by_type": by_type,
             "report_date": date.today().isoformat(),
         }

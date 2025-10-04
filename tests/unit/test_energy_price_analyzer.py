@@ -8,10 +8,7 @@ from decimal import Decimal
 import pytest
 
 from polish_energy_regulatory_office.energy_price_analyzer import EnergyPriceAnalyzer
-from polish_energy_regulatory_office.energy_price_analyzer.models import (
-    PriceData,
-    TariffStructure,
-)
+from polish_energy_regulatory_office.energy_price_analyzer.models import PriceData, TariffStructure
 from polish_energy_regulatory_office.energy_price_analyzer.utils import format_currency
 
 
@@ -24,16 +21,12 @@ class TestEnergyPriceAnalyzer:
         assert analyzer is not None
         assert hasattr(analyzer, "scraper")
 
-    def test_analyze_price_trends_with_mock_data(
-        self, mock_ure_scraper, sample_price_data
-    ):
+    def test_analyze_price_trends_with_mock_data(self, mock_ure_scraper, sample_price_data):
         """Test price trend analysis with mock data."""
         mock_ure_scraper.fetch_price_data.return_value = sample_price_data
 
         analyzer = EnergyPriceAnalyzer(scraper=mock_ure_scraper)
-        result = analyzer.analyze_price_trends(
-            start_date=date(2023, 1, 1), end_date=date(2023, 1, 31)
-        )
+        result = analyzer.analyze_price_trends(start_date=date(2023, 1, 1), end_date=date(2023, 1, 31))
 
         assert result is not None
         assert hasattr(result, "period_start")
@@ -65,9 +58,7 @@ class TestPriceData:
 
     def test_price_data_creation(self):
         """Test creating price data instance."""
-        price_data = PriceData(
-            date=date(2023, 1, 1), price=Decimal("250.50"), energy_type="electricity"
-        )
+        price_data = PriceData(date=date(2023, 1, 1), price=Decimal("250.50"), energy_type="electricity")
 
         assert price_data.date == date(2023, 1, 1)
         assert price_data.price == Decimal("250.50")
@@ -117,9 +108,7 @@ class TestTariffStructure:
         )
 
         total_cost = tariff.calculate_total_cost(100.0)  # 100 kWh
-        expected_cost = (
-            Decimal("45.0") + (Decimal("0.65") * Decimal("100.0")) + Decimal("25.0")
-        )
+        expected_cost = Decimal("45.0") + (Decimal("0.65") * Decimal("100.0")) + Decimal("25.0")
 
         assert total_cost == expected_cost
 

@@ -17,12 +17,10 @@ class RESRegistryScraper:
     BASE_URL = "https://www.ure.gov.pl"
     REGISTRY_ENDPOINTS = {
         "installations": (
-            "/pl/oze/rejestry-i-bazy-danych-oze/5678,"
-            "Rejestr-wytworcow-energii-w-mikroinstalacjach.html"
+            "/pl/oze/rejestry-i-bazy-danych-oze/5678," "Rejestr-wytworcow-energii-w-mikroinstalacjach.html"
         ),
         "producers": (
-            "/pl/oze/rejestry-i-bazy-danych-oze/5677,"
-            "Rejestr-wytworcow-w-odnawialnych-zrodlach-energii.html"
+            "/pl/oze/rejestry-i-bazy-danych-oze/5677," "Rejestr-wytworcow-w-odnawialnych-zrodlach-energii.html"
         ),
     }
 
@@ -37,9 +35,7 @@ class RESRegistryScraper:
                     "AppleWebKit/537.36 (KHTML, like Gecko) "
                     "Chrome/91.0.4472.124 Safari/537.36"
                 ),
-                "Accept": (
-                    "text/html,application/xhtml+xml," "application/xml;q=0.9,*/*;q=0.8"
-                ),
+                "Accept": ("text/html,application/xhtml+xml," "application/xml;q=0.9,*/*;q=0.8"),
                 "Accept-Language": "pl-PL,pl;q=0.9,en;q=0.8",
                 "Accept-Encoding": "gzip, deflate",
                 "Connection": "keep-alive",
@@ -102,9 +98,7 @@ class RESRegistryScraper:
             "last_updated": datetime.now().isoformat(),
         }
 
-    def _parse_json_installations(
-        self, data: Dict[str, Any]
-    ) -> List[RenewableInstallation]:
+    def _parse_json_installations(self, data: Dict[str, Any]) -> List[RenewableInstallation]:
         """Parse installations from JSON response."""
         installations = []
 
@@ -119,9 +113,7 @@ class RESRegistryScraper:
 
         return installations
 
-    def _parse_html_installations(
-        self, html_content: str
-    ) -> List[RenewableInstallation]:
+    def _parse_html_installations(self, html_content: str) -> List[RenewableInstallation]:
         """Parse installations from HTML response."""
         installations = []
         soup = BeautifulSoup(html_content, "html.parser")
@@ -137,12 +129,8 @@ class RESRegistryScraper:
                         "installation_id": cells[0].get_text(strip=True),
                         "name": cells[1].get_text(strip=True),
                         "installation_type": "solar_pv",
-                        "capacity_kw": float(
-                            cells[2].get_text(strip=True).replace(",", ".")
-                        ),
-                        "commissioning_date": datetime.strptime(
-                            cells[3].get_text(strip=True), "%Y-%m-%d"
-                        ).date(),
+                        "capacity_kw": float(cells[2].get_text(strip=True).replace(",", ".")),
+                        "commissioning_date": datetime.strptime(cells[3].get_text(strip=True), "%Y-%m-%d").date(),
                         "voivodeship": cells[4].get_text(strip=True),
                         "municipality": cells[5].get_text(strip=True),
                         "operator": cells[6].get_text(strip=True),

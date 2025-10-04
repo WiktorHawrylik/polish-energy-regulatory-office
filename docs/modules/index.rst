@@ -22,7 +22,7 @@ market dynamics, and cost forecasting based on URE data.
 Renewable Energy Sources Mapper
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :doc:`renewable_energy_sources_mapper` module offers comprehensive mapping and analysis
+The renewable_energy_sources_mapper module offers comprehensive mapping and analysis
 of renewable energy installations across Poland.
 
 **Key Features:**
@@ -34,7 +34,7 @@ of renewable energy installations across Poland.
 Microinstallation Mapper
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :doc:`microinstallation_mapper` module specializes in tracking small-scale renewable
+The microinstallation_mapper module specializes in tracking small-scale renewable
 energy installations, particularly rooftop solar and small wind installations.
 
 **Key Features:**
@@ -46,7 +46,7 @@ energy installations, particularly rooftop solar and small wind installations.
 Energy Efficiency Audit Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :doc:`energy_efficiency_audit_tool` module provides automated tools for conducting
+The energy_efficiency_audit_tool module provides automated tools for conducting
 energy efficiency audits and generating compliance reports.
 
 **Key Features:**
@@ -58,7 +58,7 @@ energy efficiency audits and generating compliance reports.
 Tariff Oracle
 ~~~~~~~~~~~~~
 
-The :doc:`tariff_oracle` module helps users navigate and optimize their energy tariff
+The tariff_oracle module helps users navigate and optimize their energy tariff
 selections based on consumption patterns and available options.
 
 **Key Features:**
@@ -70,7 +70,7 @@ selections based on consumption patterns and available options.
 Renewable Auctions Monitor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :doc:`renewable_auctions_monitor` module tracks renewable energy auctions,
+The renewable_auctions_monitor module tracks renewable energy auctions,
 results, and market dynamics in the Polish energy sector.
 
 **Key Features:**
