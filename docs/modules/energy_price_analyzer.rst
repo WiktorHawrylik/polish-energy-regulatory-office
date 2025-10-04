@@ -1,5 +1,5 @@
 Energy Price Analyzer
-====================
+=====================
 
 The Energy Price Analyzer module provides comprehensive tools for analyzing energy price trends,
 market dynamics, and cost forecasting based on data from the Polish Energy Regulatory Office.
