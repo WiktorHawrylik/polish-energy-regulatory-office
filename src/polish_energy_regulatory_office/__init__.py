@@ -5,7 +5,7 @@ A comprehensive library for creating insights from publicly available data
 on the Polish Energy Regulatory Office (Urząd Regulacji Energetyki) websites.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.0.1"
 __author__ = "Wiktor Hawrylik"
 __email__ = "wiktor.hawrylik@gmail.com"
 
