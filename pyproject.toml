@@ -9,10 +9,10 @@ description = "A library for creating insights from publicly available data on t
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
-    { name = "Wiktor Madejski", email = "wiktor.hawrylik@gmail.com" }
+    { name = "Wiktor Hawrylik", email = "wiktor.hawrylik@gmail.com" }
 ]
 maintainers = [
-    { name = "Wiktor Madejski", email = "wiktor.hawrylik@gmail.com" }
+    { name = "Wiktor Hawrylik", email = "wiktor.hawrylik@gmail.com" }
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -61,10 +61,10 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/WiktorMadejski/polish-energy-regulatory-office"
-Repository = "https://github.com/WiktorMadejski/polish-energy-regulatory-office"
+Homepage = "https://github.com/WiktorHawrylik/polish-energy-regulatory-office"
+Repository = "https://github.com/WiktorHawrylik/polish-energy-regulatory-office"
 Documentation = "https://polish-energy-regulatory-office.readthedocs.io"
-"Bug Tracker" = "https://github.com/WiktorMadejski/polish-energy-regulatory-office/issues"
+"Bug Tracker" = "https://github.com/WiktorHawrylik/polish-energy-regulatory-office/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,7 +1,7 @@
 # Polish Energy Regulatory Office Library
 
-[![CI](https://github.com/WiktorMadejski/polish-energy-regulatory-office/workflows/CI/badge.svg)](https://github.com/WiktorMadejski/polish-energy-regulatory-office/actions)
-[![codecov](https://codecov.io/gh/WiktorMadejski/polish-energy-regulatory-office/branch/main/graph/badge.svg)](https://codecov.io/gh/WiktorMadejski/polish-energy-regulatory-office)
+[![CI](https://github.com/WiktorHawrylik/polish-energy-regulatory-office/workflows/CI/badge.svg)](https://github.com/WiktorHawrylik/polish-energy-regulatory-office/actions)
+[![codecov](https://codecov.io/gh/WiktorHawrylik/polish-energy-regulatory-office/branch/main/graph/badge.svg)](https://codecov.io/gh/WiktorHawrylik/polish-energy-regulatory-office)
 [![PyPI version](https://badge.fury.io/py/polish-energy-regulatory-office.svg)](https://badge.fury.io/py/polish-energy-regulatory-office)
 [![Python versions](https://img.shields.io/pypi/pyversions/polish-energy-regulatory-office.svg)](https://pypi.org/project/polish-energy-regulatory-office/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -59,7 +59,7 @@ pip install polish-energy-regulatory-office
 
 ### From source
 ```bash
-git clone https://github.com/WiktorMadejski/polish-energy-regulatory-office.git
+git clone https://github.com/WiktorHawrylik/polish-energy-regulatory-office.git
 cd polish-energy-regulatory-office
 pip install -e .
 ```
@@ -68,21 +68,21 @@ pip install -e .
 
 #### Option 1: Standard setup (Linux/Windows)
 ```bash
-git clone https://github.com/WiktorMadejski/polish-energy-regulatory-office.git
+git clone https://github.com/WiktorHawrylik/polish-energy-regulatory-office.git
 cd polish-energy-regulatory-office
 ./setup_dev.sh
 ```
 
 #### Option 2: macOS with pyenv (recommended for macOS)
 ```bash
-git clone https://github.com/WiktorMadejski/polish-energy-regulatory-office.git
+git clone https://github.com/WiktorHawrylik/polish-energy-regulatory-office.git
 cd polish-energy-regulatory-office
 ./setup_dev_macos.sh
 ```
 
 #### Option 3: Manual installation
 ```bash
-git clone https://github.com/WiktorMadejski/polish-energy-regulatory-office.git
+git clone https://github.com/WiktorHawrylik/polish-energy-regulatory-office.git
 cd polish-energy-regulatory-office
 pip install -e ".[dev,test,docs]"
 ```
@@ -250,14 +250,14 @@ Or visit the [online documentation](https://polish-energy-regulatory-office.read
 
 For **macOS users with pyenv**:
 ```bash
-git clone https://github.com/WiktorMadejski/polish-energy-regulatory-office.git
+git clone https://github.com/WiktorHawrylik/polish-energy-regulatory-office.git
 cd polish-energy-regulatory-office
 ./setup_dev_macos.sh
 ```
 
 For **Linux/Windows users**:
 ```bash
-git clone https://github.com/WiktorMadejski/polish-energy-regulatory-office.git
+git clone https://github.com/WiktorHawrylik/polish-energy-regulatory-office.git
 cd polish-energy-regulatory-office
 ./setup_dev.sh
 ```
@@ -266,7 +266,7 @@ cd polish-energy-regulatory-office
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/WiktorMadejski/polish-energy-regulatory-office.git
+   git clone https://github.com/WiktorHawrylik/polish-energy-regulatory-office.git
    cd polish-energy-regulatory-office
    ```
 
@@ -304,8 +304,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Support
 
-- **Issues**: [GitHub Issues](https://github.com/WiktorMadejski/polish-energy-regulatory-office/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/WiktorMadejski/polish-energy-regulatory-office/discussions)
+- **Issues**: [GitHub Issues](https://github.com/WiktorHawrylik/polish-energy-regulatory-office/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/WiktorHawrylik/polish-energy-regulatory-office/discussions)
 - **Email**: wiktor.hawrylik@gmail.com
 
 ## 📈 Roadmap
