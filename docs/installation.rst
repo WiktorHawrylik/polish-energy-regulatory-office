@@ -21,7 +21,7 @@ Installing from Source
 
 .. code-block:: bash
 
-   git clone https://github.com/WiktorMadejski/polish-energy-regulatory-office.git
+   git clone https://github.com/WiktorHawrylik/polish-energy-regulatory-office.git
    cd polish-energy-regulatory-office
 
 2. Install in development mode:
