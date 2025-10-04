@@ -46,7 +46,7 @@ jobs:
 
       - name: Test with pytest
         run: |
-          pytest --cov=polish_energy_regulatory_office --cov-report=xml --cov-report=term
+          pytest --cov --cov-branch --cov-report=xml
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
