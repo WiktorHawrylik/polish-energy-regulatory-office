@@ -23,13 +23,9 @@ class UREPriceScraper:
         """Initialize scraper with configuration."""
         self.timeout = timeout
         self.session = requests.Session()
-        self.session.headers.update(
-            {"User-Agent": "Mozilla/5.0 (compatible; PolishEnergyBot/1.0)"}
-        )
+        self.session.headers.update({"User-Agent": "Mozilla/5.0 (compatible; PolishEnergyBot/1.0)"})
 
-    def fetch_price_data(
-        self, start_date: date, end_date: date, energy_type: str = "electricity"
-    ) -> List[PriceData]:
+    def fetch_price_data(self, start_date: date, end_date: date, energy_type: str = "electricity") -> List[PriceData]:
         """Fetch price data for given date range and energy type."""
         if energy_type not in self.PRICE_ENDPOINTS:
             raise ValueError(f"Unsupported energy type: {energy_type}")
@@ -75,9 +71,7 @@ class UREPriceScraper:
         # For now, return empty list
         return []
 
-    def get_available_tariffs(
-        self, energy_type: str = "electricity"
-    ) -> List[Dict[str, Any]]:
+    def get_available_tariffs(self, energy_type: str = "electricity") -> List[Dict[str, Any]]:
         """Get list of available tariffs for given energy type."""
         # Implementation placeholder
         return [

@@ -76,9 +76,7 @@ class RegionalData:
     def __post_init__(self) -> None:
         """Calculate derived metrics."""
         if self.installation_count > 0:
-            self.average_installation_size = (
-                self.total_capacity_kw / self.installation_count
-            )
+            self.average_installation_size = self.total_capacity_kw / self.installation_count
 
 
 @dataclass

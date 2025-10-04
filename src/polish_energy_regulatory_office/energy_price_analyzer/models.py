@@ -55,11 +55,7 @@ class TariffStructure:
 
     def calculate_total_cost(self, consumption_kwh: float) -> Decimal:
         """Calculate total cost for given consumption."""
-        return (
-            self.base_price
-            + (self.energy_price * Decimal(str(consumption_kwh)))
-            + self.network_fee
-        )
+        return self.base_price + (self.energy_price * Decimal(str(consumption_kwh))) + self.network_fee
 
 
 @dataclass

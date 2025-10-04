@@ -18,9 +18,7 @@ class EnergyPriceAnalyzer:
         self.scraper = scraper or UREPriceScraper()
         self._cache: Dict[str, Any] = {}
 
-    def analyze_price_trends(
-        self, start_date: date, end_date: date, energy_type: str = "electricity"
-    ) -> PriceAnalysis:
+    def analyze_price_trends(self, start_date: date, end_date: date, energy_type: str = "electricity") -> PriceAnalysis:
         """Analyze price trends for a given period."""
         # Implementation placeholder
         price_data = self.scraper.fetch_price_data(start_date, end_date, energy_type)
@@ -57,9 +55,7 @@ class EnergyPriceAnalyzer:
             trend = "stable"
         else:
             first_half_avg = sum(prices[: len(prices) // 2]) / (len(prices) // 2)
-            second_half_avg = sum(prices[len(prices) // 2 :]) / (
-                len(prices) - len(prices) // 2
-            )
+            second_half_avg = sum(prices[len(prices) // 2 :]) / (len(prices) - len(prices) // 2)
             if second_half_avg > first_half_avg * 1.05:
                 trend = "increasing"
             elif second_half_avg < first_half_avg * 0.95:
@@ -92,9 +88,7 @@ class EnergyPriceAnalyzer:
 
         return tariffs
 
-    def forecast_prices(
-        self, historical_data: List[PriceData], forecast_days: int = 30
-    ) -> List[PriceData]:
+    def forecast_prices(self, historical_data: List[PriceData], forecast_days: int = 30) -> List[PriceData]:
         """Generate price forecasts based on historical data."""
         # Implementation placeholder - would use ML models
         # For now, return empty list
