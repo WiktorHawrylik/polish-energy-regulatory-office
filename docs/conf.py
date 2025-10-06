@@ -13,8 +13,8 @@ sys.path.insert(0, os.path.abspath("../src"))
 project = "Polish Energy Regulatory Office"
 copyright = f"{datetime.now().year}, Wiktor Hawrylik"
 author = "Wiktor Hawrylik"
-release = "0.0.1"
-version = "0.0.1"
+release = "0.0.2"
+version = "0.0.2"
 
 # General configuration
 extensions = [

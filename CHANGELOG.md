@@ -13,9 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Changed license from MIT to GPL-3.0
-- Updated license badge in README.md
-- Updated project metadata in pyproject.toml
+- TBD
 
 ### Deprecated
 
@@ -32,6 +30,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - TBD
+
+## [0.0.2] - 2025-10-06
+
+### Changed
+
+- Changed license from MIT to GPL-3.0
+- Updated license badge in README.md
+- Updated project metadata in pyproject.toml
 
 ## [0.0.1] - 2025-10-04
 
