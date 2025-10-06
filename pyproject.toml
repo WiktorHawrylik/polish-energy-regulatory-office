@@ -7,7 +7,7 @@ name = "polish-energy-regulatory-office"
 version = "0.0.1"
 description = "A library for creating insights from publicly available data on the Polish Energy Regulatory Office"
 readme = "README.md"
-license = "MIT"
+license = "GPL-3.0"
 authors = [
     { name = "Wiktor Hawrylik", email = "wiktor.hawrylik@gmail.com" }
 ]

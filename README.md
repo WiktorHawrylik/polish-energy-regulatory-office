@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/WiktorHawrylik/polish-energy-regulatory-office/branch/main/graph/badge.svg)](https://codecov.io/gh/WiktorHawrylik/polish-energy-regulatory-office)
 [![PyPI version](https://badge.fury.io/py/polish-energy-regulatory-office.svg)](https://badge.fury.io/py/polish-energy-regulatory-office)
 [![Python versions](https://img.shields.io/pypi/pyversions/polish-energy-regulatory-office.svg)](https://pypi.org/project/polish-energy-regulatory-office/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 A comprehensive Python library for creating insights from publicly available data on the Polish Energy Regulatory Office (Urząd Regulacji Energetyki) websites:
 - [ure.gov.pl](https://ure.gov.pl)
@@ -292,7 +292,7 @@ This project follows the **Git Flow** branching strategy for organized developme
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Support
 
