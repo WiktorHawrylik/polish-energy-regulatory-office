@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/WiktorHawrylik/polish-energy-regulatory-office/workflows/CI/badge.svg)](https://github.com/WiktorHawrylik/polish-energy-regulatory-office/actions)
 [![codecov](https://codecov.io/gh/WiktorHawrylik/polish-energy-regulatory-office/branch/main/graph/badge.svg)](https://codecov.io/gh/WiktorHawrylik/polish-energy-regulatory-office)
-[![PyPI version](https://badge.fury.io/py/polish-energy-regulatory-office.svg)](https://badge.fury.io/py/polish-energy-regulatory-office)
+[![PyPI version](https://img.shields.io/pypi/v/polish-energy-regulatory-office.svg)](https://pypi.org/project/polish-energy-regulatory-office/)
 [![Python versions](https://img.shields.io/pypi/pyversions/polish-energy-regulatory-office.svg)](https://pypi.org/project/polish-energy-regulatory-office/)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
