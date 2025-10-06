@@ -12,8 +12,6 @@ from .models import AuditReport, BuildingData, EfficiencyMetrics
 from .scrapers import EfficiencyDataScraper
 from .utils import calculate_efficiency_score, generate_recommendations
 
-__version__ = "0.0.2"
-
 __all__ = [
     "EnergyEfficiencyAuditor",
     "AuditReport",
