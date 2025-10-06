@@ -79,20 +79,100 @@ git push origin hotfix/1.0.1
 
 ### 5. Working with Releases
 
+Follow this step-by-step process to create a new release:
+
+#### Step 1: Create Release Branch
 ```bash
-# Start a release
+# Start a release from develop
 git checkout develop
 git pull origin develop
-git checkout -b release/1.1.0
-
-# Prepare release (update version, changelog, etc.)
-# ... make final adjustments ...
-
-# Push release branch for code review
-git push origin release/1.1.0
-# Then create PR: release/1.1.0 → main
-# After merging to main, also merge back to develop
+git checkout -b release/v1.1.0
 ```
+
+#### Step 2: Update Version and Documentation
+
+1. **Update version number** in the following files:
+   - `pyproject.toml` (version field)
+   - `src/polish_energy_regulatory_office/__init__.py` (__version__ variable)
+
+2. **Update CHANGELOG.md**:
+   - Move items from `[Unreleased]` section to new version section
+   - Add release date (current date)
+   - Reset `[Unreleased]` section with TBD placeholders
+   - Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format
+
+3. **Review and update documentation** if needed:
+   - Update README.md if there are new features
+   - Check that all examples still work
+   - Verify installation instructions
+
+#### Step 3: Commit Release Changes
+```bash
+# Commit version and changelog updates
+git add .
+git commit -m "release: prepare version 1.1.0"
+
+# Push release branch
+git push origin release/v1.1.0
+```
+
+#### Step 4: Create Pull Request to Main
+1. Create PR: `release/v1.1.0` → `main`
+2. Title: "Release v1.1.0"
+3. Description should include:
+   - Summary of changes
+   - Link to changelog section
+   - Testing performed
+4. Wait for CI checks to pass
+5. Get required approvals
+6. Merge to main (use merge commit, not squash)
+
+#### Step 5: Create Git Tag and GitHub Release
+```bash
+# After merging to main, create and push tag
+git checkout main
+git pull origin main
+git tag -a v1.1.0 -m "Release version 1.1.0"
+git push origin v1.1.0
+```
+
+Then create GitHub Release (that will trigger .github/workflows/release.yml):
+1. Go to GitHub repository → Releases → "Create a new release"
+2. Choose tag: `v1.1.0`
+3. Release title: "v1.1.0"
+4. Description: Copy relevant section from CHANGELOG.md
+5. Publish release
+
+#### Step 7: Merge Back to Develop
+```bash
+# Merge main back to develop to keep branches in sync
+git checkout develop
+git pull origin develop
+git merge main
+git push origin develop
+```
+
+#### Step 8: Clean Up
+```bash
+# Delete local release branch
+git branch -d release/v1.1.0
+
+# Delete remote release branch (optional)
+git push origin --delete release/v1.1.0
+```
+
+#### Release Checklist
+- [ ] Version updated in `pyproject.toml`
+- [ ] Version updated in main `__init__.py`
+- [ ] CHANGELOG.md updated with new version
+- [ ] Documentation reviewed and updated
+- [ ] Release branch created and pushed
+- [ ] PR to main created and approved
+- [ ] PR merged to main
+- [ ] Git tag created and pushed
+- [ ] GitHub release created
+- [ ] Changes merged back to develop
+- [ ] Release branch cleaned up
 
 ## Standard Git Commands for Git Flow
 
