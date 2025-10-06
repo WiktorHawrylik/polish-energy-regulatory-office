@@ -11,7 +11,7 @@ from .oracle import TariffOracle
 from .scrapers import TariffDataScraper
 from .utils import calculate_savings, optimize_tariff_selection
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 __all__ = [
     "TariffOracle",
